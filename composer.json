@@ -11,8 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "drupalwxt/site-wxt": "^4.0.0-rc3",
-        "doctrine/annotations": "^1.4"
+        "drupalwxt/site-wxt": "^8.x-dev"
     },
     "repositories": [
         {
@@ -34,28 +33,28 @@
     ],
     "extra": {
         "installer-paths": {
-            "docroot/core": [
+            "html/core": [
                 "type:drupal-core"
             ],
-            "docroot/profiles/contrib/{$name}": [
+            "html/profiles/contrib/{$name}": [
                 "type:drupal-profile"
             ],
-            "docroot/profiles/custom/{$name}": [
+            "html/profiles/custom/{$name}": [
                 "type:drupal-custom-profile"
             ],
-            "docroot/modules/contrib/{$name}": [
+            "html/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "docroot/modules/custom/{$name}": [
+            "html/modules/custom/{$name}": [
                 "type:drupal-custom-module"
             ],
-            "docroot/themes/contrib/{$name}": [
+            "html/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
-            "docroot/themes/custom/{$name}": [
+            "html/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ],
-            "docroot/libraries/{$name}": [
+            "html/libraries/{$name}": [
                 "type:drupal-library"
             ],
             "drush/Commands/{$name}": [
