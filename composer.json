@@ -32,6 +32,11 @@
         }
     ],
     "extra": {
+        "installer-types": [
+            "bower-asset",
+            "npm-asset",
+            "ised-docker-development-environment"
+        ],
         "installer-paths": {
             "html/core": [
                 "type:drupal-core"
@@ -55,10 +60,16 @@
                 "type:drupal-custom-theme"
             ],
             "html/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-console-library",
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "drush/Commands/{$name}": [
                 "type:drupal-drush"
+            ],
+            ".": [
+                "type:ised-docker-development-environment"
             ]
         },
         "drupal-scaffold": {
