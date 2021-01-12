@@ -81,7 +81,7 @@
    
     "scripts": {
         "nuke-files": [
-            "rm -rf vendor composer.lock"
+            "rm -rf vendor html composer.lock"
         ],
         "nuke-soft": [
             "@composer nuke-files",
