@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "drupal/wxt": "^3.0.18",
-        "roave/better-reflection": "^4.3"
+        "doctrine/annotations": "^1.4"
     },
     "repositories": [
         {
@@ -31,5 +31,19 @@
             "type": "vcs",
             "url": "https://github.com/ossobuffo/drupal-console-extend-plugin.git"
         }
-    ]
+    ],
+    "scripts": {
+        "nuke-files": [
+            "rm -rf vendor composer.lock"
+        ],
+        "nuke-soft": [
+            "@composer nuke-files",
+            "@composer install --ansi -vvv"
+        ],
+        "nuke": [
+            "@composer nuke-files",
+            "@composer clearcache --ansi",
+            "@composer install --ansi"
+        ]
+    }
 }
