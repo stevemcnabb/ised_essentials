@@ -1,1 +1,3 @@
-# ised_essentials
+# ised_essentials - Essential Code for ISED projects
+
+

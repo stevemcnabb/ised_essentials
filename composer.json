@@ -1,0 +1,35 @@
+{
+    "name": "steve.mcnabb/ised_essentials",
+    "description": "WARNING:  EXPERIMENTAL! Essential code for ISED developers",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Steve McNabb",
+            "email": "steve.mcnabb@canada.ca"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/wxt": "^3.0.18",
+        "roave/better-reflection": "^4.3"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://drupalwxt.github.io/composer-extdeps/"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ossobuffo/drupal-console-extend-plugin.git"
+        }
+    ]
+}
