@@ -60,8 +60,14 @@
             "drush/Commands/{$name}": [
                 "type:drupal-drush"
             ]
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./html"
+            }
         }
     },
+   
     "scripts": {
         "nuke-files": [
             "rm -rf vendor composer.lock"
