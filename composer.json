@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "drupalwxt/site-wxt": "^8.x-dev"
+        "drupalwxt/site-wxt": "8.x-dev"
     },
     "repositories": [
         {
