@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "drupal/wxt": "^3.0.18",
+        "drupalwxt/site-wxt": "^4.0.0-rc3",
         "doctrine/annotations": "^1.4"
     },
     "repositories": [
@@ -32,6 +32,37 @@
             "url": "https://github.com/ossobuffo/drupal-console-extend-plugin.git"
         }
     ],
+    "extra": {
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
+        }
+    },
     "scripts": {
         "nuke-files": [
             "rm -rf vendor composer.lock"
