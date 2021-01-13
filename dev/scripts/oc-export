@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# PLEASE NOTE - this script uses the syntax for yq version 4.x - it will not work with older versions
+
+# Exports an object to YAML, removing extraneous metadata along the way with yq version 4
+# Usage:
+#   oc-export.sh <object_type> <object_name>
+# Usage Example:
+#   oc-export.sh dc petclinic > petclinic-dc.yaml
+#
+oc get $1 $2 -o yaml \
+    | yq eval 'del(.metadata.resourceVersion)' - \
+    | yq eval 'del(.metadata.uid)' -\
+    | yq eval 'del(.metadata.annotations)' -\
+    | yq eval 'del(.metadata.creationTimestamp)' -\
+    | yq eval 'del(.metadata.selfLink)' -\
+    | yq eval 'del(.metadata.managedFields)' -\
+    | yq eval 'del(.metadata.generation)' -\
+    | yq eval 'del(.metadata.namespace)' -\
+    | yq eval 'del(.spec.template.metadata.creationTimestamp)' -\
+    | yq eval 'del(.spec.clusterIP)' -\
+    | yq eval 'del(.spec.volumeName)' -\
+    | yq eval 'del(.status)' -
+
