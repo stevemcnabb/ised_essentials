@@ -92,5 +92,9 @@
             "@composer clearcache --ansi",
             "@composer install --ansi"
         ]
+    },
+    "require-dev": {
+        "chi-teck/drupal-code-generator": "^1.28.1",
+        "ergebnis/composer-normalize": "^2.13"
     }
 }
